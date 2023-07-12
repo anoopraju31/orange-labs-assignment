@@ -32,4 +32,15 @@ const puppeteer = require('puppeteer')
 	await page.click(
 		'#__next > div > div > div.sc-889ee977-0.gCbopq > main > div.sc-55ee4011-1.cZHlms > div.sc-55ee4011-3.dlZmAt > div.sc-55ee4011-0.iXoIVV > div.css-1urcov8 > div:nth-child(1) > div.css-1k491an > button',
 	)
+
+	// wait till the model is loaded
+	await page.waitForSelector(
+		'div.chakra-portal > div > div.chakra-modal__content-container > section',
+	)
+
+	// typing token name
+	await page.type(
+		'div.chakra-portal > div > div.chakra-modal__content-container > section > div > input',
+		'Wrapped BTC',
+	)
 })()
