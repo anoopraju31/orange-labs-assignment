@@ -43,4 +43,9 @@ const puppeteer = require('puppeteer')
 		'div.chakra-portal > div > div.chakra-modal__content-container > section > div > input',
 		'Wrapped BTC',
 	)
+
+	// selecting selling token
+	await page.click(
+		'div.chakra-portal > div > div.chakra-modal__content-container > section > div.List > div > div:nth-child(1)',
+	)
 })()
