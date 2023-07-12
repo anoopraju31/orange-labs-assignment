@@ -1,0 +1,14 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "Basic automation using Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anoop Raju",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^20.8.1"
+  }
+}
