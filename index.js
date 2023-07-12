@@ -69,4 +69,18 @@ const puppeteer = require('puppeteer')
 	await page.click(
 		'div.chakra-portal > div > div.chakra-modal__content-container > section > div.List > div > div:nth-child(1)',
 	)
+	// Wait for a specific selector to appear
+	await page.waitForSelector(
+		'main > div.sc-55ee4011-1.cZHlms > div.sc-55ee4011-3.dlZmAt > div.sc-55ee4011-2.fcGAPg > div',
+	)
+
+	// Add a delay of 10 seconds
+	await new Promise((resolve) => setTimeout(resolve, 10000))
+
+	// Click on a specific element
+	await page.click(
+		'main > div.sc-55ee4011-1.cZHlms > div.sc-55ee4011-3.dlZmAt > div.sc-55ee4011-2.fcGAPg > div:nth-child(5)',
+	)
+
+	await browser.close()
 })()
